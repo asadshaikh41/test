@@ -81,7 +81,7 @@ const Invioce = sequelize.define('Invioce', {
     },
     BilltoWhatsappNo: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     currency:{
         type:DataTypes.STRING,

@@ -54,6 +54,10 @@ const InvioceDetails = sequelize.define('InvioceDetails', {
     itemTotal:{
         type:DataTypes.STRING,
         allowNull:true,
+    },
+    Description:{
+        type:DataTypes.STRING,
+        allowNull:true,
     }
 
 })
