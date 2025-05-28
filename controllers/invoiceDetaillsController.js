@@ -60,6 +60,17 @@ exports.InvoiceDetailsById=async(req,res)=>{
    res.status(500).json({message:"error",error})
   }
 }
+
+exports.getByInvoiceId=async(req,res)=>{
+  try{
+        const { invId } = req.params;
+        const invoices = await InvoiceDetails.findAll({ where: { invoiceIdr: invId } })
+        res.status(200).json({ message: 'All invoice details of invoice fetched successfully', data: invoices })
+  }catch(error){
+     console.log(error)
+   res.status(500).json({message:"error",error})
+  }
+}
 // exports.updateInvoiceDetails=async(req,res)=>{
 //   try {
 //    const invoicedetails=await InvoiceDetails.findByPk(req.params.id);
@@ -158,6 +169,7 @@ exports.upsertInvoiceDetails = async (req, res) => {
     });
   }
 }
+
 
 
 

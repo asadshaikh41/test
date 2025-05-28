@@ -31,6 +31,10 @@ const Invioce = sequelize.define('Invioce', {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
     },
+      invoice_Percentage_Discount: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false,
+    },
     invoice_Discount: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
@@ -94,6 +98,14 @@ const Invioce = sequelize.define('Invioce', {
     isActive: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
+    },
+    hospitalIDR:{
+        type:DataTypes.INTEGER,
+        allowNull:false,
+    },
+    hospitalGroupIDR:{
+        type:DataTypes.INTEGER,
+        allowNull:true,
     },
     createdBy: {
         type: DataTypes.STRING,

@@ -15,52 +15,56 @@ const InvioceDetails = sequelize.define('InvioceDetails', {
             key: "invoiceId",
         }
     },
-    itemIdr:{
-        type:DataTypes.INTEGER,
-        allowNull:false,
+    itemIdr: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
     },
-    itemHSNCode:{
-      type:DataTypes.STRING,
-      allowNull:true,  
+    itemHSNCode: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemGST:{
-        type:DataTypes.STRING,
-        allowNull:true,  
+    itemGST: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemQuantity:{
-        type:DataTypes.STRING,
-        allowNull:true,  
+    itemQuantity: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemRate:{
-        type:DataTypes.STRING,
-        allowNull:true,  
+    itemRate: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemAmount:{
-        type:DataTypes.STRING,
-        allowNull:true,  
+    itemAmount: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemCGST:{
-        type:DataTypes.STRING,
-        allowNull:true,
+    itemDiscountPercentage: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemSGST:{
-        type:DataTypes.STRING,
-        allowNull:true,
+    itemCGST: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemDiscount:{
-        type:DataTypes.STRING,
-        allowNull:true,
+    itemSGST: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    itemTotal:{
-        type:DataTypes.STRING,
-        allowNull:true,
+    itemDiscount: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
-    Description:{
-        type:DataTypes.STRING,
-        allowNull:true,
+    itemTotal: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    Description: {
+        type: DataTypes.STRING,
+        allowNull: true,
     }
 
 })
 
-module.exports=InvioceDetails;
+module.exports = InvioceDetails;
 
