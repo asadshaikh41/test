@@ -5,7 +5,7 @@ exports.createInvoicePayment = async (req, res) => {
         await InvoicePayment.create(req.body);
         res.status(201).json({ message: 'Invoice payment done successfully' })
     } catch (error) {
-        req.status(500).json({ message: 'Something went wrong', error: error })
+        res.status(500).json({ message: 'Something went wrong', error: error })
     }
 }
 
@@ -18,7 +18,7 @@ exports.getAllInvoicePayment = async (req, res) => {
         }
         res.status(200).json({ message: 'All invoice payment fetched successfully ', data: allPayments });
     } catch (error) {
-        req.status(500).json({ message: 'Something went wrong', error: error })
+        res.status(500).json({ message: 'Something went wrong', error: error })
     }
 }
 
@@ -30,7 +30,7 @@ exports.getInvoicePaymentById = async (req, res) => {
         }
         res.status(200).json({ message: 'Invoice payment fetched successfully ', data: invoicePaymentById });
     } catch (error) {
-        req.status(500).json({ message: 'Something went wrong', error: error })
+        res.status(500).json({ message: 'Something went wrong', error: error })
     }
 }
 
@@ -40,7 +40,7 @@ exports.getInvoicePayment = async (req, res) => {
         const invoices = await InvoicePayment.findAll({ where: { invoiceIdr: invId } })
         res.status(200).json({ message: 'All payment details of invoice fetched successfully', data: invoices })
     } catch (error) {
-        req.status(500).json({ message: 'Something went wrong', error: error })
+        res.status(500).json({ message: 'Something went wrong', error: error })
     }
 }
 
@@ -56,7 +56,7 @@ exports.updateInvoicePayment = async (req, res) => {
         }
 
     } catch (error) {
-        req.status(500).json({ message: 'Something went wrong', error: error })
+        res.status(500).json({ message: 'Something went wrong', error: error })
     }
 }
 
@@ -72,6 +72,6 @@ exports.deleteInvoicePayment = async (req, res) => {
         }
 
     } catch (error) {
-        req.status(500).json({ message: 'Something went wrong', error: error })
+        res.status(500).json({ message: 'Something went wrong', error: error })
     }
 }

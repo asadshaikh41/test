@@ -39,6 +39,7 @@ const InvoicePayment = sequelize.define('invoice_payment', {
         type:DataTypes.INTEGER,
         allowNull:false
     },
+
     user_name:{
         type:DataTypes.STRING,
         allowNull:false
@@ -55,6 +56,43 @@ const InvoicePayment = sequelize.define('invoice_payment', {
         type:DataTypes.STRING,
         allowNull:false
      },
+      upi_id: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  upi_app: {
+    type: DataTypes.ENUM("GooglePay", "PhonePe", "Paytm", "BHIM"),
+    allowNull: true,
+  },
+
+  // Debit Card specific
+  Debit_card_number: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  Debit_card_holder_name: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  Debit_card_expiry: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+
+  // Credit Card specific
+  Credit_card_number: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  Credit_card_holder_name: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  Credit_card_expiry: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+   
     
 },{
   tableName: 'invoice_payments',
